@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dr. Riku Nath | Personal Website</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4fffc;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #00a884, #00c9a7);
+      color: white;
+      padding: 18px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #ffe8ef;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #00a884, #00d4b4);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #00a884;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background: #222;
+      color: white;
+    }
+
+    section {
+      padding: 70px 5%;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #00a884;
+      font-size: 34px;
+      margin-bottom: 40px;
+    }
+
+    .about-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      color: #00a884;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background: white;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .gallery-item img,
+    .gallery-item video {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .gallery-item p {
+      text-align: center;
+      padding: 8px;
+    }
+
+    .doctor {
+      background: #e7fff9;
+    }
+
+    .doctor-box {
+      background: white;
+      max-width: 700px;
+      margin: auto;
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .doctor-box h3 {
+      font-size: 28px;
+      color: #00a884;
+      margin-bottom: 15px;
+    }
+
+    .contact-box {
+      text-align: center;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      background: #063f35;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 768px) {
+
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero h2 {
+        font-size: 21px;
+      }
+
+      .cards,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">Dr. Riku Nath</div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#doctor">Doctor</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Home -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h1>Dr. Riku Nath</h1>
+
+      <h2>Welcome to My Personal Website</h2>
+
+      <p>
+        Welcome to my personal website.
+        Here you can learn more about me,
+        my professional activities, skills and gallery.
+      </p>
+
+      <a href="#about" class="btn">Explore More</a>
+      <a href="#contact" class="btn">Contact Me</a>
+
+    </div>
+  </section>
+
+
+  <!-- About -->
+  <section id="about">
+
+    <div class="container">
+
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-box">
+
+        <h3>Dr. Riku Nath</h3>
+
+        <p>
+          Welcome to my personal website.
+          This website contains information about my
+          professional activities, skills, photos,
+          videos and other activities.
+        </p>
+
+        <p>
+          Thank you for visiting my website.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Gallery -->
+  <section id="gallery">
+
+    <div class="container">
+
+      <h2 class="section-title">My Gallery</h2>
+
+      <div class="gallery">
+
+        <div class="gallery-item">
+          <img src="photo1.jpg" alt="My Photo">
+          <p>My Photo</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="photo2.jpg" alt="My Photo">
+          <p>My Activities</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="photo3.jpg" alt="My Photo">
+          <p>Beautiful Memory</p>
+        </div>
+
+        <div class="gallery-item">
+          <video controls>
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support video.
+          </video>
+          <p>My Video</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Skills -->
+  <section id="skills">
+
+    <div class="container">
+
+      <h2 class="section-title">My Skills</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Professional Skills</h3>
+          <p>
+            Professional activities and
+            healthcare-related knowledge.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Communication</h3>
+          <p>
+            Friendly communication and
+            patient-focused service.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Digital Skills</h3>
+          <p>
+            Website, digital media and
+            online content creation.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Doctor -->
+  <section class="doctor" id="doctor">
+
+    <div class="container">
+
+      <h2 class="section-title">Doctor</h2>
+
+      <div class="doctor-box">
+
+        <h3>Dr. Riku Nath</h3>
+
+        <p>
+          Welcome to my professional profile.
+        </p>
+
+        <p>
+          For professional information and
+          consultation details, please contact me.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact">
+
+    <div class="container">
+
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="contact-box">
+
+        <h3>Get In Touch</h3>
+
+        <p>
+          You can contact me for more information.
+        </p>
+
+        <br>
+
+        <a href="tel:+8801000000000" class="btn">
+          Call Me
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <p>
+      © 2026 Dr. Riku Nath. All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
