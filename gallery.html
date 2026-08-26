@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Dr. Riku Nath</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f8fc;
+      color: #222;
+    }
+
+    header {
+      background: #087f5b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #087f5b;
+      margin-bottom: 25px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .item {
+      background: white;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .item img,
+    .item video {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .item p {
+      text-align: center;
+      margin: 10px 5px 5px;
+      font-size: 16px;
+    }
+
+    .back {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background: #087f5b;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .back:hover {
+      background: #065f46;
+    }
+
+    .empty {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>📸 My Gallery</h1>
+    <p>Dr. Riku Nath</p>
+  </header>
+
+  <div class="container">
+
+    <h2 class="section-title">ছবি ও ভিডিও গ্যালারি</h2>
+
+    <div class="empty">
+      <p>এখানে আমার ছবি ও ভিডিও প্রদর্শিত হবে।</p>
+      <p>নতুন ছবি বা ভিডিও যোগ করতে GitHub repository-তে ফাইল আপলোড করতে হবে।</p>
+    </div>
+
+    <div class="gallery">
+
+      <!-- ছবি যোগ করার উদাহরণ -->
+      <!--
+      <div class="item">
+        <img src="photo1.jpg" alt="আমার ছবি">
+        <p>আমার ছবি</p>
+      </div>
+      -->
+
+      <!-- ভিডিও যোগ করার উদাহরণ -->
+      <!--
+      <div class="item">
+        <video controls>
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+        <p>আমার ভিডিও</p>
+      </div>
+      -->
+
+    </div>
+
+    <a class="back" href="index.html">← Home এ ফিরে যান</a>
+
+  </div>
+
+</body>
+</html>
